@@ -4,3 +4,14 @@ set port to 10081
 create a shared folder in windows (doesn't like c:\ routing)
 
 libname orionx pcfiles path="\\pcname\sharedfolder\file.xlsx" server='pcname ip address';
+
+example (week 03 lab)
+
+libname orionx pcfiles path="\\desktop-62beg9c\Data and Resources Weeks 01 to 04\sales.xlsx" server='192.168.1.19';
+proc contents data=orionx._all_; 
+run;
+
+proc print data=orionx.'Australia$'n noobs;
+where Job_Title contains 'IV';
+var Employee_ID Last_Name Job_Title Salary;
+run;
