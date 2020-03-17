@@ -1,0 +1,6 @@
+setting up pcfiles with SAS UE
+
+set port to 10081 
+create a shared folder in windows (doesn't like c:\ routing)
+
+libname orionx pcfiles path="\\pcname\sharedfolder\file.xlsx" server='pcname ip address';
